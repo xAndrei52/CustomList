@@ -1,0 +1,6 @@
+name: CustomList
+version: 1.0.0-ALPHA
+api: 3.0.0-ALPHA10
+author: VMPE Development Team
+description: Modified the /list command for PMMP.
+
