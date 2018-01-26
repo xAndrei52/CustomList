@@ -18,7 +18,7 @@ public function onEnable(){
 	public function onCommand(CommandSender $sender, Command $command, string $label, array $args) : bool{
         $cmd = strtolower($command->getName());
         switch ($cmd){
-            case "list":
+            case "vmlist":
                 if (!($sender instanceof Player)){
                     $getOnlinePlayers = $this->getServer()->getOnlinePlayers($sender->getName());
                     $getMaxPlayers = $this->getServer()->getMaxPlayers($sender->getName());
