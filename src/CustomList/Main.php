@@ -1,6 +1,7 @@
 <?php
 namespace CustomList;
 use pocketmine\command\CommandSender;
+use pocketmine\command\Command;
 use pocketmine\event\player\PlayerChatEvent;
 use pocketmine\plugin\Pluginbase;
 use pocketmine\Player;
@@ -11,7 +12,7 @@ public function onEnable(){
                 $this->getServer()->getPluginManager()->registerEvents($this, $this);
 		$this->getLogger()->info(TEXTFORMAT::BLUE . "[STAFF]" .TEXTFORMAT::RED. " >>" .TEXTFORMAT::AQUA.  " CustomList running version 1.0.0-ALPHA");
 	}
-	public function onCommand(CommandSender $sender, Command $command, string $label, array $args): bool{
+	public function onCommand(CommandSender $sender, Command $command, string $label, array $args) : bool{
         $cmd = strtolower($command->getName());
         switch ($cmd){
             case "list":
