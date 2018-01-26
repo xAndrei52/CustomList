@@ -21,7 +21,7 @@ public function onEnable(){
         switch ($cmd){
             case "vmlist":
                 if (!($sender instanceof Player)){
-                    $playerNames = $this->getServer()->getPlayers($sender->getName());
+                    $playerNames = $this->getServer()->getPlayer($sender->getName());
                     $getMaxPlayers = $this->getServer()->getMaxPlayers($sender->getName());
                     $playersOnline = $this->getServer()->getPlayersOnline($sender->getName());
                     $sender->sendMessage(TEXTFORMAT::GOLD . "§aThere is currently §b$playersOnline §aout of §b$getMaxPlayers §aonline.");
@@ -29,6 +29,6 @@ public function onEnable(){
                     return true;
             }
         }
-    }
+    return true;
 }
 
