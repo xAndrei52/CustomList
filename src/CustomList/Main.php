@@ -26,7 +26,6 @@ public function onEnable(){
                     $playersOnline = $this->getServer()->getPlayersOnline($sender->getName());
                     $sender->sendMessage(TEXTFORMAT::GOLD . "§aThere is currently §b$playersOnline §aout of §b$getMaxPlayers §aonline.");
                     $sender->sendMessage(implode("§c, §7", $playerNames));
-                    return true;
             }
         }
     }
