@@ -19,6 +19,7 @@ public function onEnable(){
 	public function onCommand(CommandSender $sender, Command $command, string $label, array $args): bool{
         $cmd = strtolower($command->getName());
         switch ($cmd){
+	return true;
             case "vmlist":
                 if (!($sender instanceof Player)){
                     $playerNames = $this->getServer()->getPlayer($sender->getName());
