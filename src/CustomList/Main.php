@@ -29,6 +29,6 @@ public function onEnable(){
                     return true;
             }
         }
-    return true;
+    }
 }
 
