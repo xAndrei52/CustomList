@@ -1,8 +1,14 @@
 <?php
 namespace CustomList;
-use pocketmine\command\CommandSender;
+
+use pocketmine\utils\TextFormat;
+use pocketmine\plugin\PluginBase;
+use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerChatEvent;
+use pocketmine\command\CommandSender;
+use pocketmine\command\Command;
 use pocketmine\Player;
+
 class Main extends PluginBase implements Listener {
     
 public function onEnable(){
