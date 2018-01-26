@@ -7,10 +7,5 @@ description: Modified the /list command for PMMP.
 commands:
   vmlist:
          description: Allows you to see a list of players online.
-         permission: customlist.list
-permissions:
-  customlist.list:
-  default: true
-  description: Allows use of /vmlist.
     
 
