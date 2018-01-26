@@ -2,6 +2,7 @@
 namespace CustomList;
 use pocketmine\command\CommandSender;
 use pocketmine\event\player\PlayerChatEvent;
+use pocketmine\plugin\Pluginbase;
 use pocketmine\Player;
 class Main extends PluginBase implements Listener {
     
