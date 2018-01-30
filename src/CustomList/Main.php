@@ -5,7 +5,7 @@ namespace CustomList;
 use pocketmine\utils\TextFormat;
 use pocketmine\plugin\PluginBase;
 use pocketmine\event\Listener;
-use pocketmine\event\player\PlayerChatEvent;
+use pocketmine\event\PlayerChatEvent;
 use pocketmine\command\CommandSender;
 use pocketmine\command\Command;
 use pocketmine\Player;
@@ -20,11 +20,10 @@ public function onEnable(){
         switch ($cmd){
             case "vmlist":
                 if (!($sender instanceof Player)){
-                    $playerNames = $this->getServer()->getPlayer($sender->getName());
-                    $getMaxPlayers = $this->getServer()->getMaxPlayers($sender->getName());
+                    $maxPlayers = $this->getServer()->getMaxPlayers($sender->getName());
                     $playersOnline = $this->getServer()->getPlayersOnline($sender->getName());
-                    $sender->sendMessage(TEXTFORMAT::GOLD . "§aThere is currently §b$playersOnline §aout of §b$getMaxPlayers §aonline.");
-                    $sender->sendMessage(implode("§c, §7", $playerNames));
+		    $playersList = $this->getServer()->getPlayersByList($sender->getName());
+                    $sender->sendMessage(TEXTFORMAT::GOLD . "§aThere is currently §b$playersOnline §aout of §b$maxPlayers §aonline.\n§dimplode("," $playersList");
                     return true;
             }
         }
