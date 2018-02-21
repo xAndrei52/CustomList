@@ -20,10 +20,9 @@ public function onEnable(){
         switch ($cmd){
             case "vmlist":
                 if (!($sender instanceof Player)){
-                    $maxPlayers = $this->getServer()->getMaxPlayers($sender->getName());
-                    $playersOnline = $this->getServer()->getPlayersOnline($sender->getName());
-		    $playersList = $this->getServer()->getPlayersByList($sender->getName());
-                    $sender->sendMessage(TEXTFORMAT::GOLD . "§aThere is currently §b$playersOnline §aout of §b$maxPlayers §aonline.\n§dimplode("," $playersList");
+                    foreach(Server::getInstance()->getOnlinePlayers() as $player) {
+			$players[] = $player->getName();
+                    $sender->sendMessage(TEXTFORMAT::GOLD . "§aHere are the online players.\n§dimplode("," $players");
                     return true;
             }
         }
