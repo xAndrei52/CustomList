@@ -30,8 +30,9 @@ public function onEnable(){
                             return true;
                  }
              } else {
+		}
 	        if (!($sender instanceof ConsoleCommandSender)){
-			    $this->getServer()->getLogger()->info($sender->sendMessage("Please run this command in game"));
+			    $this->getServer()->getLogger()->info("Please run this command in game");
                             return true;
                            }
                    }
