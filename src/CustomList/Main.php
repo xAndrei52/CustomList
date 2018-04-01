@@ -9,6 +9,7 @@ use pocketmine\event\PlayerChatEvent;
 use pocketmine\command\ConsoleCommandSender;
 use pocketmine\command\CommandSender;
 use pocketmine\command\Command;
+use pocketmine\Server;
 use pocketmine\Player;
 
 class Main extends PluginBase implements Listener {
@@ -34,6 +35,7 @@ public function onEnable(){
                             return true;
                            }
                    }
+	        }
             return true;
     }
 }
