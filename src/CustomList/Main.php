@@ -20,10 +20,13 @@ public function onEnable(){
         switch ($cmd){
             case "vmlist":
                 if (!($sender instanceof Player)){
-                    foreach(Server::getInstance()->getOnlinePlayers() as $player) {
-			$players[] = $player->getName();
-                    $sender->sendMessage(TEXTFORMAT::GOLD . "§aHere are the online players.\n§dimplode("," $players");
-                    return true;
+                    foreach($this->getServer()->getOnlinePlayers() as $player) {
+		            $maxPlayers = $this->getServer()->getMaxPlayers();
+			    $onlineList = $this->getServer()->getLoggedInPlayers();
+                            $sender->sendMessage(TEXTFORMAT::GOLD . "§bThere are currently §3$onlineList §bonline! §aHere are the online players.\n§dimplode("," $player");
+                            return true;
+		    } else {
+			    $sender->sendMessage("Please use this command in game");
             }
         }
     }
