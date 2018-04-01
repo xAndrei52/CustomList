@@ -37,6 +37,4 @@ public function onEnable(){
                            }
                    }
 	        }
-            return true;
-    }
-}
+            }
