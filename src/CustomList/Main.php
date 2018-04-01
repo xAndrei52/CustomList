@@ -6,6 +6,7 @@ use pocketmine\utils\TextFormat;
 use pocketmine\plugin\PluginBase;
 use pocketmine\event\Listener;
 use pocketmine\event\PlayerChatEvent;
+use pocketmine\command\ConsoleCommandSender;
 use pocketmine\command\CommandSender;
 use pocketmine\command\Command;
 use pocketmine\Player;
@@ -28,6 +29,7 @@ public function onEnable(){
                             return true;
                  }
              } else {
+	        if (!($sender instanceof ConsoleCommandSender)){
 			    $this->getServer()->getLogger()->info($sender->sendMessage("Please run this command in game"));
                             return true;
                            }
