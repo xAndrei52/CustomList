@@ -9,6 +9,7 @@ use pocketmine\event\PlayerChatEvent;
 use pocketmine\command\CommandSender;
 use pocketmine\command\Command;
 use pocketmine\Player;
+
 class Main extends PluginBase implements Listener {
     
 public function onEnable(){
@@ -23,7 +24,7 @@ public function onEnable(){
                     foreach($this->getServer()->getOnlinePlayers() as $player) {
 		            $maxPlayers = $this->getServer()->getMaxPlayers();
 			    $onlineList = $this->getServer()->getLoggedInPlayers();
-                            $sender->sendMessage(TextFormat::GOLD . "§bThere are currently §3$onlineList players §bonline! §aHere are the online players.\n§dimplode("," $player");
+                            $sender->sendMessage(TextFormat::GOLD . "§bThere are currently §3$onlineList §bonline! §aHere are the online players.\n§dimplode("," $player");
                             return true;
                  }
              } else {
@@ -31,5 +32,6 @@ public function onEnable(){
                             return true;
                            }
                    }
-            }
+            return true;
     }
+}
