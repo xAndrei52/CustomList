@@ -25,7 +25,7 @@ public function onEnable(){
                     foreach($this->getServer()->getOnlinePlayers() as $player) {
                             $maxPlayers = $this->getServer()->getMaxPlayers();
                             $onlineList = $this->getServer()->getLoggedInPlayers();
-                            $sender->sendMessage(TextFormat::GOLD . "§bThere are currently §3$onlineList §bonline! §aHere are the online players.\n§dimplode("," $player");
+                            $sender->sendMessage(TextFormat::GOLD . "§8(§eKP§8) §6There are currently §b$onlineList §aonline! §eHere are the online players.\n§5implode("," $player");
                             return true;
                  }
                }
